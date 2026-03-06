@@ -1,4 +1,4 @@
-# Next.js Portfolio Template
+# Dinesh Suthar Portfolio 
 
 A modern, high-performance, and fully customizable portfolio template built with **Next.js 14**, **TypeScript**, and **Tailwind CSS**. Designed for developers to showcase their projects, skills, and services with a unique developer-centric aesthetic.
 
