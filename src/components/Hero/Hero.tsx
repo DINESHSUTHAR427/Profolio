@@ -7,14 +7,14 @@ import Ellipse from './Ellipse'
 
 const Hero = () => {
   const ellipseRef = useRotatingAnimation()
-  const role = useRoleSwitcher({ roles: ['FULLSTACK DEVELOPER', 'INDIE HACKER', 'SOLOPRENEUR'] })
+  const role = useRoleSwitcher({ roles: ['FULLSTACK DEVELOPER', 'FASTAPI DEVELOPER','NODE DEVELOPER', ] })
 
   return (
     <section className="bg-primary bg-small-glow bg-small-glow-position md:bg-large-glow-position lg:bg-large-glow min-h-[calc(dvh-4rem)] bg-no-repeat">
       <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-4 px-4 pt-12 pb-10 md:grid-cols-2 lg:p-4">
         <div className="flex min-h-48 flex-col justify-between lg:min-h-56 lg:max-w-[33.75rem]">
           <h1>
-            <span className="text-neutral mb-2 block text-3xl font-bold">Hi - I'm John Doe</span>
+            <span className="text-neutral mb-2 block text-3xl font-bold">Hi - I'm Dinesh Suthar</span>
             <span className="text-accent block text-[1.75rem] font-bold">{role}</span>
           </h1>
 
@@ -30,10 +30,16 @@ const Hero = () => {
               Hire Me
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/dinesh-suthar-517388317/"
               aria-label="View LinkedIn Profile"
               className="text-neutral bg-secondary cursor-pointer rounded-lg px-[14px] py-[10px] text-sm">
               LinkedIn Profile
+            </a>
+            <a
+              href="https://drive.google.com/file/d/1y1IsykuMbriqYZeY1-CjTN1iZI_5vLch/view"
+              aria-label="View LinkedIn Profile"
+              className="text-neutral bg-secondary cursor-pointer rounded-lg px-[14px] py-[10px] text-sm">
+              My Resume
             </a>
           </div>
         </div>
@@ -44,7 +50,7 @@ const Hero = () => {
               src={HeroImage}
               fill={true}
               priority={true}
-              sizes="(min-width: 1024px) 25.75rem, (min-width: 768px) 20rem, (min-width: 640px) 15rem, 14rem"
+              sizes="(min-width: 1025px) 27.75rem, (min-width: 768px) 20rem, (min-width: 640px) 15rem, 14rem"
               alt="John Doe - Full Stack Developer"
               className="object-contain p-7"
             />

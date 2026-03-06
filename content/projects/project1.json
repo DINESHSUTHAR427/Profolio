@@ -1,9 +1,10 @@
 {
   "priority": 1,
-  "title": "Color Contrast Collection",
-  "shortDescription": "Curated Background with Text colors contrast, help you to pick best contrast for your websites",
-  "cover": "https://res.cloudinary.com/dyvkdwzcj/image/upload/v1645090814/color-contrast_n598kw.png",
-  "livePreview": "https://example.com/alpha",
-  "type": "Client Work 🙍‍♂️",
+  "title": "Blog_Application-with-MERN",
+  "shortDescription": "A simple and elegant blogging platform built with Node.js, Express, and MongoDB. Blogify allows users to sign up, create beautifully formatted blog posts with cover images, and engage with content through comments",
+  "cover": "https://res.cloudinary.com/dfqzpgqhu/image/upload/v1772789208/Screenshot_2026-03-06_at_14.56.32_au6u15.png",
+  "livePreview": "https://blog-application-with-mern.vercel.app/",
+  "githubLink" : "https://github.com/DINESHSUTHAR427/Blog_Application-with-MERN",
+  "type": "personal Work 🙍‍♂️",
   "siteAge": "1 month old"
 }

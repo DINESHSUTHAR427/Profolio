@@ -48,7 +48,7 @@ const Footer = () => {
             ))}
           </ul>
           <p className="text-tertiary-content flex flex-col self-end text-right text-xs md:text-center">
-            <span>© 2025 — Copyright</span>
+            <span>© 2026 — Copyright</span>
             <span>All Rights reserved</span>
           </p>
         </div>
@@ -60,26 +60,20 @@ const Footer = () => {
               <a
                 href="mailto:johndoe@gmail.com"
                 className="text-tertiary-content hover:text-neutral text-sm font-light transition-colors duration-300">
-                johndoe@gmail.com
-              </a>
-              <a
-                href="tel:+92 3123456789"
-                className="text-tertiary-content hover:text-neutral text-sm font-light transition-colors duration-300">
-                +92 3123456789
+                dineshsutharr427@gmail.com
               </a>
             </div>
             <div>
               <div>
                 <h5 className="text-neutral mb-4 text-lg font-medium">Location</h5>
                 <address className="text-tertiary-content flex flex-col text-sm font-light">
-                  <span>123456, Pakistan</span>
-                  <span>Karachi 22/5/8, Office 4</span>
+                  <span>Ahemdabad, Gujrat</span>
+                  <span>gota ,Ahemdabad, Gujrat</span>
                 </address>
               </div>
             </div>
           </div>
-
-          <div className="md:self-end">
+           <div className="md:self-end">
             <p className="text-neutral mb-8 text-sm md:text-right">Languages</p>
             <div className="flex gap-8 md:gap-4 lg:gap-8">
               {languages.map((language, idx) => (
