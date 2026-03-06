@@ -14,15 +14,25 @@ const description =
   "Skilled full-stack web developer in Chicago. I build responsive, user-friendly websites with React, NextJS, and NodeJS. Let's bring your vision to life. Hire me today!"
 
 // NEXT_PUBLIC_SITE_URL is required for generating absolute URLs (metadata, open graph, etc).
-// In development, fallback to localhost so the app still runs when the env var is missing.
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
-const url = siteUrl
+// In development, fallback to localhost so the app still runs when the env var is missing or invalid.
+const safeSiteUrl = (() => {
+  const env = process.env.NEXT_PUBLIC_SITE_URL
+  if (!env) return 'http://localhost:3000'
+
+  try {
+    return new URL(env).toString()
+  } catch {
+    return 'http://localhost:3000'
+  }
+})()
+
+const url = safeSiteUrl
 
 export const metadata: Metadata = {
   title,
   description,
   category: 'technology',
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(safeSiteUrl),
   alternates: {
     canonical: url,
   },
