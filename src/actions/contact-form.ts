@@ -1,5 +1,10 @@
 'use server'
 
+import { Resend } from 'resend'
+import { emailConfig } from '@/appData/email'
+
+const resend = new Resend(emailConfig.resendApiKey)
+
 const action = async (_: { success: boolean; message: string } | null, formData: FormData) => {
   try {
     const name = formData.get('name')
@@ -30,30 +35,37 @@ const action = async (_: { success: boolean; message: string } | null, formData:
         message: 'Please provide a message.',
       }
 
-    const res = await fetch(process.env.CONTACT_FORM_ACTION_URL!, {
-      method: 'POST',
-      body: formData,
-      headers: {
-        Accept: 'application/json',
-      },
+    const { data, error } = await resend.emails.send({
+      from: emailConfig.resendFrom,
+      to: emailConfig.toEmail,
+      replyTo: email as string,
+      subject: `Contact Form: ${subject} - from ${name}`,
+      html: `
+        <h2>New Contact Form Submission</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Subject:</strong> ${subject}</p>
+        <h3>Message:</h3>
+        <p>${message}</p>
+      `,
     })
 
-    if (res.ok) {
-      return { success: true, message: 'Thanks for your submission!' }
-    } else {
-      const data = await res.json()
-      console.error(data?.error)
-
+    if (error) {
+      console.error('Resend error:', error)
       return {
         success: false,
         message: 'Oops! There was a problem submitting your form',
       }
     }
+
+    console.log('Email sent:', data)
+    return { success: true, message: 'Thanks for your submission!' }
   } catch (error) {
-    console.error('Contact form submission error: ' + error)
+    console.error('Contact form submission error:', error)
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
     return {
       success: false,
-      message: 'Oops! There was a problem submitting your form',
+      message: `Oops! There was a problem: ${errorMessage}`,
     }
   }
 }

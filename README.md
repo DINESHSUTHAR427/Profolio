@@ -1,125 +1,123 @@
-<<<<<<< HEAD
-# Dinesh Suthar Portfolio 
-=======
-# Next.js Portfolio Template
->>>>>>> 24411ce (change footer variable)
+# Profolio - Developer Portfolio Template
 
-A modern, high-performance, and fully customizable portfolio template built with **Next.js 14**, **TypeScript**, and **Tailwind CSS**. Designed for developers to showcase their projects, skills, and services with a unique developer-centric aesthetic.
+A modern, high-performance portfolio template built with **Next.js**, **TypeScript**, and **Tailwind CSS**. Perfect for developers to showcase projects, skills, and services with a sleek, professional aesthetic.
 
-## 🚀 Features
+![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4-38bdf8?style=flat&logo=tailwind-css)
+![MIT License](https://img.shields.io/badge/License-MIT-green)
 
-- **Next.js 14 (App Router):** Utilizing the latest features of Next.js for optimal performance and SEO.
-- **TypeScript:** Type-safe code for better maintainability and developer experience.
-- **Tailwind CSS:** Utility-first CSS framework for rapid and responsive UI development.
-- **Theming System:** Built-in theme switcher with multiple color presets (Dark/Light modes supported via data attributes).
-- **Responsive Design:** Fully responsive layout that works seamlessly on mobile, tablet, and desktop.
-- **Custom Icons:** Lightweight, custom SVG icons without heavy icon library dependencies.
-- **SEO Optimized:** Includes dynamic Open Graph images and metadata configuration.
-- **Server Actions:** Built-in contact form handling using Next.js Server Actions.
-- **Animations:** Smooth CSS-based animations and transitions.
+## Features
 
-## 🛠️ Tech Stack
+- **Next.js 16** - App Router with Server Actions
+- **TypeScript** - Type-safe code for maintainability
+- **Tailwind CSS 4** - Utility-first styling
+- **Theme System** - Multiple color presets with dark/light mode support
+- **Responsive Design** - Mobile, tablet, and desktop optimized
+- **Custom Icons** - Lightweight SVG icons
+- **SEO Optimized** - Open Graph images, metadata, sitemap, robots.txt
+- **Animations** - Smooth CSS-based transitions
+- **Contact Form** - Server-side form handling with validation
+
+## Tech Stack
 
 - **Framework:** [Next.js](https://nextjs.org/)
 - **Language:** [TypeScript](https://www.typescriptlang.org/)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-- **Font:** [Fira Code](https://fonts.google.com/specimen/Fira+Code) (via `next/font`)
+- **Font:** [Fira Code](https://fonts.google.com/specimen/Fira+Code)
 - **Deployment:** Vercel (Recommended)
 
-## 🏁 Getting Started
-
-Follow these instructions to get a copy of the project up and running on your local machine.
+## Getting Started
 
 ### Prerequisites
 
-Ensure you have the following installed:
 - Node.js (v18.17.0 or later)
 - npm, yarn, or pnpm
 
 ### Installation
 
-1.  **Clone the repository:**
+```bash
+# Clone the repository
+git clone <repository-url>
+cd Profolio
 
-    ```bash
-    git clone https://github.com/DINESHSUTHAR427/nextjs-portfolio-template.git
-    cd nextjs-portfolio-template
-    ```
+# Install dependencies
+npm install
 
-2.  **Install dependencies:**
-
-    ```bash
-    npm install
-    # or
-    yarn install
-    # or
-    pnpm install
-    ```
-
-3.  **Run the development server:**
-
-    ```bash
-    npm run dev
-    # or
-    yarn dev
-    # or
-    pnpm dev
-    ```
-
-4.  **Open your browser:**
-    Navigate to http://localhost:3000 to see the application.
-
-## 📂 Project Structure
-
-```text
-src/
-├── actions/        # Server actions (e.g., contact form submission)
-├── app/            # Next.js App Router pages and layouts
-├── appData/        # Static data files (projects, skills, testimonials)
-├── components/     # Reusable UI components
-│   ├── Contact/    # Contact section components
-│   ├── Footer/     # Footer component
-│   ├── Hero/       # Hero section components
-│   ├── Navbar/     # Navigation bar
-│   ├── Projects/   # Project showcase components
-│   ├── Services/   # Services section components
-│   ├── Skills/     # Skills section components
-│   ├── Testimonials/ # Testimonial components
-│   ├── Theme/      # Theme switcher components
-│   └── UI/         # Generic UI elements (Buttons, Inputs)
-├── hooks/          # Custom React hooks
-├── lib/            # Utility types and libraries
-├── services/       # Data fetching services
-└── utils/          # Helper functions and icons
+# Run development server
+npm run dev
 ```
 
-## 🎨 Customization
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-This template is designed to be easily customizable. Most of the content is driven by data files located in `src/appData`.
+## Project Structure
 
-### 1. Personal Information
-Edit `src/appData/personal.tsx` to update your social media links and personal details.
+```
+src/
+├── actions/           # Server actions (contact form)
+├── app/               # App Router pages and layouts
+├── appData/           # Static data (personal info, config)
+├── components/        # Reusable components
+│   ├── Contact/       # Contact section
+│   ├── Footer/        # Footer
+│   ├── Hero/          # Hero section
+│   ├── Navbar/        # Navigation
+│   ├── Projects/      # Project showcase
+│   ├── Services/      # Services section
+│   ├── Skills/        # Skills section
+│   ├── Theme/         # Theme switcher
+│   └── UI/            # Buttons, inputs, etc.
+├── hooks/             # Custom React hooks
+├── lib/               # Type definitions
+└── utils/             # Helpers and icons
+```
 
-### 2. Projects, Skills, & Services
-Update the respective files in `src/appData/` to reflect your own portfolio items.
+## Customization
 
-### 3. Themes
-You can modify or add new themes in `src/appData/index.ts` (or wherever `themes` is exported). The `ThemeMenu` component automatically renders available themes.
+### Personal Information
 
-### 4. SEO & Metadata
-Update `src/app/layout.tsx` to change the site title, description, and other metadata.
-Update `src/app/opengraph-image.tsx` to customize the generated social preview image.
+Edit `src/appData/personal.tsx` to update your name, bio, and social links.
 
-## 🚀 Deployment
+### Content
 
-The easiest way to deploy your Next.js app is using the Vercel Platform.
+- Projects: `src/appData/` or `content/projects/`
+- Skills: Update in corresponding data files
+- Services: Edit service configurations
 
-## ✍️ Author
+### Theme
+
+Modify `src/appData/index.ts` to add or adjust themes.
+
+### SEO
+
+Update metadata in `src/app/layout.tsx` and social images in `src/app/opengraph-image.tsx`.
+
+## Available Scripts
+
+| Command         | Description              |
+| --------------- | ------------------------ |
+| `npm run dev`   | Start development server |
+| `npm run build` | Build for production     |
+| `npm run start` | Start production server  |
+| `npm run lint`  | Run ESLint               |
+
+## Deployment
+
+Deploy to Vercel with zero configuration:
+
+```bash
+# Push to GitHub and import in Vercel
+# Or use Vercel CLI
+npm i -g vercel
+vercel
+```
+
+## License
+
+MIT License - feel free to use this template for personal and commercial projects.
+
+## Author
 
 **Dinesh Suthar**
 
-- LinkedIn: Dinesh Suthar
-- GitHub: @DINESHSUTHAR427
-
-## 📜 License
-
-This project is licensed under the MIT License.
+- GitHub: [@DINESHSUTHAR427](https://github.com/DINESHSUTHAR427)
