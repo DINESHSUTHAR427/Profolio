@@ -1,9 +1,11 @@
 // Data for portfolio
 import {
   ExpressjsIcon,
+  FastApi,
   JavaScriptIcon,
   NextjsIcon,
   NodejsIcon,
+  Python,
   ReactIcon,
   SocketIcon,
   TailwindCSS,
@@ -28,19 +30,14 @@ export const projects = [
 // Service Data
 export const serviceData = [
   {
-    icon: JavaScriptIcon,
-    title: 'JavaScript Development',
-    shortDescription: 'Creating dynamic and interactive web applications using JavaScript.',
-  },
-  {
-    icon: ReactIcon,
-    title: 'React.js Development',
-    shortDescription: 'Building modern and responsive user interfaces with React.js.',
-  },
-  {
     icon: NodejsIcon,
     title: 'Node.js Backend',
     shortDescription: 'Developing scalable server-side applications using Node.js.',
+  },
+  {
+    icon: FastApi,
+    title: 'FastApi Development',
+    shortDescription: 'Developing scalable server-side applications using FastApi.',
   },
   {
     icon: NextjsIcon,
@@ -48,14 +45,24 @@ export const serviceData = [
     shortDescription: 'Creating server-rendered React applications with Next.js.',
   },
   {
+    icon: ReactIcon,
+    title: 'React.js Development',
+    shortDescription: 'Building modern and responsive user interfaces with React.js.',
+  },
+  {
+    icon: JavaScriptIcon,
+    title: 'JavaScript Development',
+    shortDescription: 'Creating dynamic and interactive web applications using JavaScript.',
+  },
+  {
     icon: TypescriptIcon,
     title: 'TypeScript Development',
     shortDescription: 'Ensuring robust and maintainable code with TypeScript.',
   },
   {
-    icon: TailwindCSS,
-    title: 'Tailwind CSS Styling',
-    shortDescription: 'Designing beautiful and responsive interfaces with Tailwind CSS.',
+    icon: Python,
+    title: 'Python Development',
+    shortDescription: 'Building scalable backend applications and APIs using Python.',
   },
 ]
 
@@ -64,6 +71,10 @@ export const skillList = [
   {
     name: 'JavaScript',
     icon: JavaScriptIcon,
+  },
+  {
+    name: 'Python',
+    icon: Python,
   },
   {
     name: 'TypeScript',
@@ -82,13 +93,14 @@ export const skillList = [
     icon: NodejsIcon,
   },
   {
+    name: 'FastApi',
+    icon: FastApi,
+  },
+  {
     name: 'Express.js',
     icon: ExpressjsIcon,
   },
-  {
-    name: 'Socket.io',
-    icon: SocketIcon,
-  },
+
 ]
 
 export const footerLinks = [

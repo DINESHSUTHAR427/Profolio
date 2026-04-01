@@ -13,6 +13,8 @@ import Star from '../assets/icons/star.svg'
 import TailwindCSS from '../assets/icons/tailwind-css.svg'
 import Timer from '../assets/icons/timer.svg'
 import TypescriptIcon from '../assets/icons/typescript.svg'
+import FastApi from '../assets/icons/fastapi.png'
+import Python from '../assets/icons/Python.png'
 
 const PreviewIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
   return (
@@ -333,6 +335,8 @@ export {
   Star,
   StarIcon,
   TailwindCSS,
+  FastApi,
+  Python,
   Timer,
   TypescriptIcon,
   X,
