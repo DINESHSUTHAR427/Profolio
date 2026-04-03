@@ -36,7 +36,7 @@ const Hero = () => {
               LinkedIn Profile
             </a>
             <a
-              href="https://ik.imagekit.io/drvrt3p6w/Dinesh_Suthar.pdf"
+              href="https://ik.imagekit.io/ruzb0cftj/Dinesh%20Suthar%20Original.pdf"
               aria-label="View LinkedIn Profile"
               className="text-neutral bg-secondary cursor-pointer rounded-lg px-[14px] py-[10px] text-sm">
               My Resume
